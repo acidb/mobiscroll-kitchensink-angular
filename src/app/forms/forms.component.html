@@ -1,0 +1,49 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <span class="span">Forms</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+<app-settings-section></app-settings-section>
+<h2>Single-line text</h2>
+<mbsc-input placeholder="Text field label" label="Label"></mbsc-input>
+<mbsc-input placeholder="Password" passwordToggle="true" label="Password Toggle hide"></mbsc-input>
+
+
+<h2>Multi-line text</h2>
+<mbsc-textarea label="About me"></mbsc-textarea>
+
+<h2>Switch</h2>
+<mbsc-switch [(ngModel)]="switch1" label="Switch Off"></mbsc-switch>
+<mbsc-switch [(ngModel)]="switch2" label="Switch On"></mbsc-switch>
+<mbsc-switch [(ngModel)]="switch3" [disabled]="true" label="Disabled Switch Off"></mbsc-switch>
+<mbsc-switch [(ngModel)]="switch4" [disabled]="true" label="Disabled Switch On"></mbsc-switch>
+<mbsc-switch color="danger" label="Sync on mobile data"></mbsc-switch>
+<mbsc-switch color="info" label="Email notification"></mbsc-switch>
+
+<h2>Button</h2>
+<div class="mbsc-button-group">
+    <mbsc-button color="primary" variant="standard">Button</mbsc-button>
+    <mbsc-button color="secondary" [disabled]="true" variant="outline">Disabled</mbsc-button>
+</div>
+
+<h2>Radio button</h2>
+<mbsc-radio-group [(ngModel)]="myRadio">
+    <mbsc-radio value="option1">Radio Option 1</mbsc-radio>
+    <mbsc-radio value="option2">Radio Option 2</mbsc-radio>
+    <mbsc-radio value="option3">Radio Option 3</mbsc-radio>
+    <mbsc-radio [disabled]="true">Disabled</mbsc-radio>
+</mbsc-radio-group>
+
+<h2>Dropdown</h2>
+<mbsc-dropdown [(ngModel)]="myValue" label="Choose one">
+    <option value="opt1">Option 1</option>
+    <option value="opt2">Option 2</option>
+    <option value="opt3">Option 3</option>
+</mbsc-dropdown>
+
+<h2>Segmented</h2>
+<mbsc-segmented-group select="multiple" name="multi">
+    <mbsc-segmented *ngFor="let item of myGroupItems" [(value)]="item.value" [(checked)]="item.checked">{{item.text}}
+    </mbsc-segmented>
+</mbsc-segmented-group>
+

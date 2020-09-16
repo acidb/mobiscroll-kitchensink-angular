@@ -1,0 +1,27 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <span class="span">Date & time</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+<app-settings-section></app-settings-section>
+<div class="my-container">
+    <mat-form-field appearance="fill">
+        <mat-label>Compact date & time picker</mat-label>
+        <input matInput mbsc-datepicker [controls]="['datetime']">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Expanded date & time picker</mat-label>
+        <input matInput mbsc-datepicker [controls]="['date', 'time']">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Date</mat-label>
+        <input matInput mbsc-datepicker [controls]="['date']">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Time</mat-label>
+        <input matInput mbsc-datepicker [controls]="['time']">
+    </mat-form-field>
+</div>

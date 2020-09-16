@@ -1,0 +1,17 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <span class="span">Calendar</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+<app-settings-section></app-settings-section>
+<div class="my-container">
+    <mat-form-field appearance="fill">
+        <mat-label>Day select</mat-label>
+        <input matInput [(ngModel)]="myDate" mbsc-datepicker [controls]="['calendar']">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Multiple day select</mat-label>
+        <input matInput [(ngModel)]="myDates" mbsc-datepicker [controls]="['calendar']" selectMultiple="true">
+    </mat-form-field>
+</div>

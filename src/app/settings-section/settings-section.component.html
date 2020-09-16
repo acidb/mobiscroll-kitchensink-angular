@@ -1,0 +1,17 @@
+<div class="settings-section">
+    <mat-button-toggle-group class="btn-group" [(ngModel)]="theme" (change)="updateOptions()">
+        <mat-button-toggle class="btn-group" *ngFor="let item of themes" [value]="item.value">
+            <mat-label>{{ item.text }}</mat-label>
+        </mat-button-toggle>
+    </mat-button-toggle-group>
+    <br>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Language</mat-label>
+        <mat-select [(ngModel)]="lang" (selectionChange)="updateOptions()">
+            <mat-option *ngFor="let item of languages" [value]= "item.value">
+                {{ item.text }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
